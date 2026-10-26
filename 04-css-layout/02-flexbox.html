@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,7 +6,76 @@
     <title>CSS Layout Exercise 02 - Flexbox</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <h1>Simple Game Showcase</h1>
+  <body class="game-page">
+    <header class="game-header">
+      <h1>Simple Game Showcase</h1>
+
+      <nav class="game-nav">
+        <a href="#dino">Dino Game</a>
+        <a href="#goose">Untitled Goose Game</a>
+        <a href="#flappy">Flappy Bird</a>
+      </nav>
+    </header>
+
+    <main class="game-container">
+      <section class="game-section" id="dino">
+        <h2>Chrome Dino Game</h2>
+        <p>
+          The Chrome Dino Game was released in 2014. It is a simple game that
+          appears when Google Chrome cannot connect to the internet.
+        </p>
+        <p>
+          Players control a dinosaur and avoid obstacles by jumping over them.
+        </p>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Chromium_T-Rex-error-offline.svg/250px-Chromium_T-Rex-error-offline.svg.png"
+            alt="Chrome dinosaur game"
+          />
+          <figcaption>The Chrome Dino running through the desert.</figcaption>
+        </figure>
+      </section>
+
+      <section class="game-section" id="goose">
+        <h2>Untitled Goose Game</h2>
+        <p>
+          Untitled Goose Game was released in 2019 by House House. Players
+          control a goose and complete tasks in a village.
+        </p>
+        <p>
+          The game involves solving puzzles and causing mischief around the
+          village.
+        </p>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/b/b2/Untitled_Goose_Game_Cover_art.jpg"
+            alt="Untitled Goose Game cover"
+          />
+          <figcaption>The mischievous goose causing trouble.</figcaption>
+        </figure>
+      </section>
+
+      <section class="game-section" id="flappy">
+        <h2>Flappy Bird</h2>
+        <p>
+          Flappy Bird was released in 2013. Players control a bird and navigate
+          through obstacles without hitting them.
+        </p>
+        <p>
+          The game became popular because of its simple controls and difficulty.
+        </p>
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"
+            alt="Flappy Bird game"
+          />
+          <figcaption>The famous Flappy Bird navigating pipes.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="game-footer">
+      <p>© 2026 Simple Game Showcase</p>
+    </footer>
   </body>
 </html>

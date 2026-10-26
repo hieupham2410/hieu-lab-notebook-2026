@@ -8,6 +8,13 @@ body {
 }
 
 /* Exercise 01 - Center */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .box {
   width: 200px;
   height: 100px;
@@ -16,6 +23,10 @@ body {
   color: var(--light-text-color);
   font-size: 1.75rem;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -40,6 +51,226 @@ h1 {
 
 /* Exercise 02 - Flexbox */
 
+.game-page {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+/* Header */
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 15px;
+}
+
+.game-header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Navigation */
+
+.game-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.game-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.game-nav a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+/* Main content */
+
+.game-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 25px;
+  padding: 25px;
+}
+
+/* Individual game sections */
+
+.game-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 15px;
+  min-width: 0;
+}
+
+.game-section h2 {
+  font-size: 18px;
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.game-section p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Images */
+
+.game-section figure {
+  margin: auto 0 0;
+  text-align: center;
+}
+
+.game-section img {
+  display: block;
+  max-width: 100%;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.game-section figcaption {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Footer */
+
+.game-footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 12px;
+}
+
+.game-footer p {
+  margin: 0;
+  font-size: 12px;
+}
 /* Exercise 03 - CSS Grid */
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px 300px 70px 70px;
+  gap: 4px;
+}
+
+.item1 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+.item3 {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.item4 {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.item5 {
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+.item6 {
+  display: none;
+}
+
+.item7 {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.item8 {
+  grid-column: 1 / 4;
+  grid-row: 4;
+}
 /* Exercise 04 - CSS Grid Areas */
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 300px 300px 80px 80px;
+  grid-template-areas:
+    "header"
+    "article"
+    "section"
+    "aside"
+    "footer";
+}
+
+.grid-container h1 {
+  display: none;
+}
+
+.grid-container .grid-item {
+  border-radius: 5px;
+  text-align: left;
+}
+
+.header {
+  grid-area: header;
+}
+
+.article {
+  grid-area: article;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.section {
+  grid-area: section;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Tablet - 768px */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 80px 300px 200px 80px;
+    grid-template-areas:
+      "header header"
+      "article aside"
+      "section section"
+      "footer footer";
+  }
+}
+
+/* Laptop - 1024px */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 80px 300px 200px 80px;
+    grid-template-areas:
+      "header header"
+      "aside article"
+      "section section"
+      "footer footer";
+  }
+}
