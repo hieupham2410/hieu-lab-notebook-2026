@@ -1,1 +1,280 @@
-/* Add your CSS code here  */
+/* Custom colors */
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+
+  --gray-border: #cccccc;
+  --table-background: #fafafa;
+  --table-emphasis: #eeeeee;
+  --page-background: #f8f8f8;
+
+  --midnight-blue: #161678;
+  --midnight-blue-dark: #0b0b50;
+  --form-white: #fefefe;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--page-background);
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Custom font */
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+/* Navigation styles */
+.nav {
+  background-color: var(--dark-slate-infinity);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 1rem;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--ice-blue-juvie);
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+/* Main area styles */
+.books-container {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 1rem;
+}
+
+.main-heading {
+  color: var(--gothic-gray-blue);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Section styles */
+.books-section {
+  margin-top: 2.5rem;
+}
+
+.secondary-heading {
+  border-bottom: 1px solid var(--gray-border);
+  padding-bottom: 0.5rem;
+}
+
+/* Book list styles */
+.books-list {
+  padding-left: 1.25rem;
+}
+
+.books-list > li {
+  margin-bottom: 0.4rem;
+}
+
+.books-list li > ol {
+  margin-top: 0.4rem;
+}
+
+/* Image styles */
+.images-container {
+  text-align: center;
+}
+
+.book-image {
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.book-image:hover {
+  transform: scale(1.1);
+}
+
+/* Table styles */
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.books-table th,
+.books-table td {
+  border: 1px solid var(--gray-border);
+  padding: 0.5rem;
+}
+
+.books-table tr:nth-child(even) {
+  background-color: var(--table-background);
+}
+
+.books-table .table-heading {
+  background-color: var(--table-emphasis);
+}
+
+.table-footer td {
+  font-weight: bold;
+  background-color: var(--table-emphasis);
+}
+
+/* Exercise 02 - Form */
+
+/* Form page background */
+
+.form-page {
+  background-color: var(--midnight-blue);
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+/* Form container */
+
+.form-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--form-white);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Form heading */
+
+.main-heading-form {
+  color: var(--midnight-blue);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* Form */
+
+.ira-form {
+  width: 100%;
+}
+
+/* Form elements */
+
+.form-element {
+  margin-bottom: 0.5rem;
+}
+
+/* Form labels */
+
+.form-label {
+  display: inline-block;
+  width: 50%;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* Form inputs */
+
+.form-input {
+  display: inline-block;
+  width: 43%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* Fieldset */
+
+.ira-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Radio button legend */
+
+.form-legend {
+  font-size: 0.9rem;
+}
+
+/* Radio buttons */
+
+.form-radios {
+  margin-left: 40px;
+  margin-bottom: 1rem;
+}
+
+.form-label-radio {
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+/* Buttons */
+
+.form-buttons {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 48%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--form-white);
+}
+
+.btn-reset {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* Button hover effects */
+
+.btn-submit:hover {
+  background-color: var(--midnight-blue-dark);
+}
+
+.btn-reset:hover {
+  background-color: #bbb;
+}
+
+/* Form note */
+
+.form-note {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.form-note a {
+  color: var(--midnight-blue);
+}
